@@ -25,7 +25,7 @@ pipeline {
     stage('Deploy') {
       steps {
         sh 'cp target/*.war /home/jenkins/deploy/spark/spark.war'
-        deploy adapters: [tomcat9(credentialsId: '8b7c4956-b765-42ef-b1ee-055bb8557ed9', path: '', url: '10.125.24.62:8083')], contextPath: '/spark', war: 'target/*.war'
+        deploy adapters: [tomcat9(credentialsId: '8b7c4956-b765-42ef-b1ee-055bb8557ed9', path: '', url: 'localhost:8880')], contextPath: '/spark', war: 'target/*.war'
       }
     }
 
