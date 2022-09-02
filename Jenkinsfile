@@ -24,7 +24,7 @@ pipeline {
 
     stage('Deploy') {
       steps {
-        deploy adapters: [tomcat9(credentialsId: 'c4c1f9b1-20af-417c-aaf3-b3b430e40c84', path: '', url: 'http://localhost:8880')], contextPath: '/sparkjavoux', war: 'target/*war'
+        deploy adapters: [tomcat9(credentialsId: 'c4c1f9b1-20af-417c-aaf3-b3b430e40c84', path: '', url: 'http://192.168.0.20:8080')], contextPath: '/sparkjavoux', war: 'target/*war'
       }
     }
 
